@@ -13,7 +13,7 @@ const getType = (type) => {
         border: "none",
         color: "#ffffff",
       };
-    case "primary":
+    case "thirdly":
       return {
         background: "#0061DF",
         border: "none",
