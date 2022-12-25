@@ -8,6 +8,7 @@ const Home = () => {
     <Container>
       <Filter />
       <Carousel />
+      <h1>Hello errors</h1>
     </Container>
   );
 };
