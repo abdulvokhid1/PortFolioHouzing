@@ -1,13 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { navbar } from "../utils/navbar";
-import Generic from "../pages/Generic";
 
 const Root = () => {
   return (
