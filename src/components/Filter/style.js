@@ -7,6 +7,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 10px 0;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -41,6 +42,7 @@ Advanced.Title = styled.div`
 const Section = styled.div`
   display: flex;
   margin-bottom: 20px;
+  justify-content: flex-end;
 `;
 export {
   Container,

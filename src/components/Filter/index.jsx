@@ -24,14 +24,23 @@ const Filter = () => {
       </Section>
       <Advanced.Title>Apartment Info</Advanced.Title>
       <Section>
-        <Input placeholder={"Rooms"}></Input>
-        <Input placeholder={"Size"}></Input>
-        <Input placeholder={"Sort"}></Input>
+        <Input mr={20} placeholder={"Rooms"}></Input>
+        <Input mr={20} placeholder={"Size"}></Input>
+        <Input mr={20} placeholder={"Sort"}></Input>
       </Section>
       <Advanced.Title>Price</Advanced.Title>
-      <Input placeholder={"Min price"}></Input>
-      <Input placeholder={"Max price"}></Input>
-      <Section></Section>
+      <Section>
+        <Input mr={20} placeholder={"Min price"}></Input>
+        <Input mr={20} placeholder={"Max price"}></Input>
+      </Section>
+      <Section>
+        <Button width="131px" ml={20} type="secondary">
+          Cancel
+        </Button>
+        <Button width="131px" ml={20} type="primary">
+          Search
+        </Button>
+      </Section>
     </Advanced>
   );
   return (

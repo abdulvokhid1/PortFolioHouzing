@@ -28,13 +28,4 @@ export const navbar = [
     private: false,
     hidden: false,
   },
-  {
-    id: 4,
-    title: "Profile",
-    path: "/profile",
-    Element: <Generic />,
-    search: "?",
-    private: false,
-    hidden: false,
-  },
 ];
