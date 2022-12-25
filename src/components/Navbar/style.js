@@ -11,10 +11,6 @@ const Container = styled.div`
   justify-content: center;
   background: var(--primaryColor);
 `;
-const Body = styled.div`
-  display: flex;
-  width: 100%;
-`;
 const NavbarWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -61,7 +57,6 @@ Logo.Title = styled.div`
 export {
   Wrapper,
   Container,
-  Body,
   NavbarWrapper,
   NavbarBody,
   StyledNavLink,

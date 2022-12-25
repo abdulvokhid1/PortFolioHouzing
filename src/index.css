@@ -74,3 +74,9 @@ body {
 .slick-dots-bottom {
   width: inherit !important;
 }
+/* @media all and(max-width: 500px) {
+  body {
+    color: black;
+  } */
+  
+/* } */
