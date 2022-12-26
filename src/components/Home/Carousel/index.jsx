@@ -10,7 +10,7 @@ const Carousel = () => {
     <Wrapper>
       <IconLeft onClick={() => slider.current.prev()} />
       <IconRight onClick={() => slider.current.next()} />
-      <Container autoplay dots ref={slider}>
+      <Container dots ref={slider}>
         <Img src={img1} />
         <Img src={img2} />
         <Img src={img3} />
