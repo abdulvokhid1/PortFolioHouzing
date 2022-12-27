@@ -15,7 +15,6 @@ const NavbarWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 64px;
-  max-width: 1440px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;

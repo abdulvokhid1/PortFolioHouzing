@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 
 const Container = styled(Carousel)`
   width: 100%;
-  /* height: 570px;  */
+  height: fit-content;
 `;
 const Img = styled.img`
   background: black;

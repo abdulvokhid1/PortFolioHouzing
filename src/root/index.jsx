@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { navbar } from "../utils/navbar";
-
 const Root = () => {
   return (
     <>

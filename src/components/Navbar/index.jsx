@@ -31,7 +31,7 @@ const Navbar = () => {
               );
             })}
           </NavbarBody>
-          <Button width={"120px"} onClick={() => navigate("/login")}>
+          <Button width={`120px`} onClick={() => navigate("/login")}>
             Login
           </Button>
         </NavbarWrapper>
