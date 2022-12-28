@@ -1,13 +1,24 @@
 import React from "react";
-import { Container, Footer, Icons, Img, Info, InfoWrapper } from "./style";
+import {
+  Container,
+  Footer,
+  Icons,
+  Img,
+  Info,
+  InfoWrapper,
+  User,
+} from "./style";
 import backimg from "../../assets/images/nobackimg.png";
 import noimg from "../../assets/images/noimage.png";
 
-const Card = ({ info }) => {
+const Card = ({ info, mr }) => {
   return (
-    <Container>
+    <Container mr={mr}>
       <Img src={info?.img || noimg} />
       <InfoWrapper>
+        <User>
+          <User.Img src={info?.user.img || noimg} />
+        </User>
         <div className="subtitle">New Apartment Nice View</div>
         <div className="description">Quincy St, Brooklyn, NY, USA</div>
         <Info>
@@ -25,7 +36,7 @@ const Card = ({ info }) => {
           </Info.Details>{" "}
           <Info.Details>
             <Icons.Ruler />
-            <div className="description"> {info?.sqr || 0}1200 Sq Ft</div>
+            <div className="description"> {info?.sqr || 0}Sq Ft</div>
           </Info.Details>
         </Info>
       </InfoWrapper>

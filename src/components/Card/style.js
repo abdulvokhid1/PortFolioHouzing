@@ -15,6 +15,7 @@ const Container = styled.div`
   background: #ffffff;
   border: 1px solid #e6e9ec;
   border-radius: 3px;
+  margin-right: ${({ mr }) => mr && `${mr}px`};
 `;
 const Img = styled.img`
   width: 100%;
@@ -27,6 +28,7 @@ const InfoWrapper = styled.div`
   padding: 25px;
   padding-bottom: 0;
   border: 1px solid #e6e9ec;
+  position: relative;
 `;
 const Info = styled.div`
   display: flex;
@@ -74,4 +76,23 @@ const Footer = styled.div`
   height: 100%;
   padding: 0 20px;
 `;
-export { Container, Img, InfoWrapper, Info, Icons, Footer };
+const User = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  right: 20px;
+  top: -23px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(13, 38, 59, 0.2);
+  overflow: hidden;
+`;
+User.Img = styled.img`
+  width: 43px;
+  height: 43px;
+  object-fit: cover;
+`;
+export { Container, Img, InfoWrapper, Info, Icons, Footer, User };

@@ -1,3 +1,4 @@
+import Proporties from "../components/Proporties";
 import Generic from "../pages/Generic";
 import Home from "../pages/Home";
 export const navbar = [
@@ -14,7 +15,7 @@ export const navbar = [
     id: 2,
     title: "Properties",
     path: "/properties",
-    Element: <Generic />,
+    Element: <Proporties />,
     search: "?",
     private: false,
     hidden: false,

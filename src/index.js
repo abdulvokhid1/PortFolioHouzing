@@ -5,17 +5,15 @@ import reportWebVitals from "./reportWebVitals";
 import Root from "./root";
 import { BrowserRouter as Router } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
-
+import "react-alice-carousel/lib/alice-carousel.css";
 const query = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <QueryClientProvider client={query}>
-      <Router>
-        <Root />
-      </Router>
-    </QueryClientProvider>
-  </React.StrictMode>
+  <QueryClientProvider client={query}>
+    <Router>
+      <Root />
+    </Router>
+  </QueryClientProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
