@@ -11,22 +11,29 @@ import {
 } from "./style";
 import Button from "../Generic/Button";
 import Input from "../Generic/Input";
-
+import { useLocation, useNavigate } from "react-router-dom";
 const Filter = () => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const onChange = ({ target }) => {
+    const { value, name } = target;
+    navigate(`${pathname}?${name}=${value}`);
+  };
   const advancedSearch = (
     <Advanced>
       <Advanced.Title>Address</Advanced.Title>
       <Section>
-        <Input mr={20} placeholder={"Country"}></Input>
-        <Input mr={20} placeholder={"Region"}></Input>
-        <Input mr={20} placeholder={"City"}></Input>
-        <Input mr={20} placeholder={"Zip Code"}></Input>
+        <Input placeholder={"Country"}></Input>
+        <Input placeholder={"Region"}></Input>
+        <Input onChange={onChange} name="city" placeholder={"City"}></Input>
+        <Input placeholder={"Zip Code"}></Input>
       </Section>
       <Advanced.Title>Apartment Info</Advanced.Title>
       <Section>
-        <Input mr={20} placeholder={"Rooms"}></Input>
-        <Input mr={20} placeholder={"Size"}></Input>
-        <Input mr={20} placeholder={"Sort"}></Input>
+        <Input placeholder={"Rooms"}></Input>
+        <Input placeholder={"Size"}></Input>
+        <Input placeholder={"Sort"}></Input>
       </Section>
       <Advanced.Title>Price</Advanced.Title>
       <Section>

@@ -9,7 +9,8 @@ import { ReactComponent as heart } from "../../assets/icons/heart.svg";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 380px;
+  flex-grow: 10;
+  max-width: 380px;
   height: 430px;
   min-width: 280px;
   background: #ffffff;

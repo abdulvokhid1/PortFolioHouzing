@@ -9,17 +9,16 @@ const Proporties = () => {
   const [data, setData] = useState([]);
 
   useQuery(
-    "get data",
+    ["get data", data],
     () => {
-      return fetch(`${url}/v1/houses/list`).then((res) => res.Json());
+      return fetch(`${url}/api/v1/houses/list`).then((res) => res.json());
     },
     {
       onSuccess: (res) => {
-        console.log(res, "res");
+        setData(res?.data);
       },
     }
   );
-
   return (
     <Container>
       <Filter />
@@ -29,13 +28,9 @@ const Proporties = () => {
       </div>
       <Total className="description">{data.length}Total </Total>
       <Wrapper>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data.map((value) => {
+          return <Card key={value.id} info={value} />;
+        })}
       </Wrapper>
     </Container>
   );

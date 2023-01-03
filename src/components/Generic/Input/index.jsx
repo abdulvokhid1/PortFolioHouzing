@@ -14,6 +14,7 @@ export const Input = ({
   pl,
   onChange,
   placeholder,
+  name,
 }) => {
   return (
     <IconWrapper ml={ml} mr={mr} mt={mt} mb={mb}>
@@ -30,6 +31,7 @@ export const Input = ({
         pl={pl}
         onChange={onChange}
         placeholder={placeholder}
+        name={name}
       ></Container>
     </IconWrapper>
   );

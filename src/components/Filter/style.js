@@ -43,6 +43,7 @@ const Section = styled.div`
   display: flex;
   margin-bottom: 20px;
   justify-content: flex-end;
+  gap: 20px;
 `;
 export {
   Container,
