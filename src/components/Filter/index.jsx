@@ -12,22 +12,32 @@ import {
 import Button from "../Generic/Button";
 import Input from "../Generic/Input";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSearch } from "../../hooks/useSearch";
 const Filter = () => {
-  const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const query = useSearch();
 
   const onChange = ({ target }) => {
     const { value, name } = target;
     navigate(`${pathname}?${name}=${value}`);
   };
+
   const advancedSearch = (
     <Advanced>
       <Advanced.Title>Address</Advanced.Title>
       <Section>
         <Input placeholder={"Country"}></Input>
         <Input placeholder={"Region"}></Input>
-        <Input onChange={onChange} name="city" placeholder={"City"}></Input>
-        <Input placeholder={"Zip Code"}></Input>
+        <Input
+          type={"text"}
+          onChange={onChange}
+          name={"city"}
+          placeholder={"City"}
+          defaultValue={query.get("city")}
+        ></Input>
+        <Input type={"password"} placeholder={"Zip Code"}></Input>
       </Section>
       <Advanced.Title>Apartment Info</Advanced.Title>
       <Section>

@@ -9,11 +9,14 @@ const { REACT_APP_BASE_URL: url } = process.env;
 const Proporties = () => {
   const [data, setData] = useState([]);
   const { search } = useLocation();
+  // console.log(location, "log");
 
   useQuery(
     ["get data", search],
     () => {
-      return fetch(`${url}/api/v1/houses/list`).then((res) => res.json());
+      return fetch(`${url}/api/v1/houses/list${search}`).then((res) =>
+        res.json()
+      );
     },
     {
       onSuccess: (res) => {
@@ -29,7 +32,7 @@ const Proporties = () => {
       <div className="description center">
         Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
       </div>
-      <Total className="description">{data.length}Total </Total>
+      <Total className="description">{data?.length || [""]}Total </Total>
       <Wrapper>
         {data.map((value) => {
           return <Card key={value.id} info={value} />;
