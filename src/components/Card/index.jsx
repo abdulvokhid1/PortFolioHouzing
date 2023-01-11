@@ -13,7 +13,7 @@ import noimg from "../../assets/images/noimage.png";
 const Card = ({ info, mr }) => {
   return (
     <Container mr={mr}>
-      <Img src={info?.attachments[0].imgPath || noimg} />
+      <Img src={info?.user.img || noimg} />
       <InfoWrapper>
         <User>
           <User.Img src={info?.user.img || noimg} />
@@ -67,3 +67,4 @@ const Card = ({ info, mr }) => {
 };
 
 export default Card;
+// info?.attachments[0].imgPath ||

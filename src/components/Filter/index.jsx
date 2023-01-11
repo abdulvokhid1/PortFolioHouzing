@@ -37,14 +37,14 @@ const Filter = () => {
       </Section>
       <Advanced.Title>Price</Advanced.Title>
       <Section>
-        <Input mr={20} placeholder={"Min price"}></Input>
-        <Input mr={20} placeholder={"Max price"}></Input>
+        <Input placeholder={"Min price"}></Input>
+        <Input placeholder={"Max price"}></Input>
       </Section>
       <Section>
-        <Button width="131px" ml={20} type="secondary">
+        <Button width="131px" type="secondary">
           Cancel
         </Button>
-        <Button width="131px" ml={20} type="primary">
+        <Button width="131px" type="primary">
           Search
         </Button>
       </Section>

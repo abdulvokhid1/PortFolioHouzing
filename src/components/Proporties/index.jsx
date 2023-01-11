@@ -3,13 +3,15 @@ import { Container, Total, Wrapper } from "./style";
 import Filter from "../Filter";
 import Card from "../Card";
 import { useQuery } from "react-query";
+import { useLocation } from "react-router-dom";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 const Proporties = () => {
   const [data, setData] = useState([]);
+  const { search } = useLocation();
 
   useQuery(
-    ["get data", data],
+    ["get data", search],
     () => {
       return fetch(`${url}/api/v1/houses/list`).then((res) => res.json());
     },
@@ -19,6 +21,7 @@ const Proporties = () => {
       },
     }
   );
+  console.log(data, "res");
   return (
     <Container>
       <Filter />
