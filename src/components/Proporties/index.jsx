@@ -20,7 +20,7 @@ const Proporties = () => {
     },
     {
       onSuccess: (res) => {
-        setData(res?.data);
+        setData(res?.data || []);
       },
     }
   );

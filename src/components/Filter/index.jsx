@@ -13,15 +13,16 @@ import Button from "../Generic/Button";
 import Input from "../Generic/Input";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSearch } from "../../hooks/useSearch";
+import { UseReplace } from "../../hooks/useReplace";
 const Filter = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-
   const query = useSearch();
 
   const onChange = ({ target }) => {
     const { value, name } = target;
-    navigate(`${pathname}?${name}=${value}`);
+    navigate(`${UseReplace(name, value)}`);
+    // navigate(`${pathname}?${name}=${value}`);
   };
 
   const advancedSearch = (
@@ -31,13 +32,12 @@ const Filter = () => {
         <Input placeholder={"Country"}></Input>
         <Input placeholder={"Region"}></Input>
         <Input
-          type={"text"}
           onChange={onChange}
           name={"city"}
           placeholder={"City"}
           defaultValue={query.get("city")}
         ></Input>
-        <Input type={"password"} placeholder={"Zip Code"}></Input>
+        <Input placeholder={"Zip Code"}></Input>
       </Section>
       <Advanced.Title>Apartment Info</Advanced.Title>
       <Section>
@@ -58,6 +58,9 @@ const Filter = () => {
           Search
         </Button>
       </Section>
+      <div>
+        <input placeholder="hello"></input>
+      </div>
     </Advanced>
   );
   return (

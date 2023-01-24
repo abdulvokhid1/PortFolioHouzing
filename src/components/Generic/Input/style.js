@@ -33,11 +33,11 @@ const Container = styled.input`
   font-size: 14px;
   color: #0d263b;
   border: 1px solid #e6e9ec;
-  ${({ type }) => getType(type)}
+  /* ${({ type }) => getType(type)}
   :active {
     transform: scale(0.98);
     opacity: 0.7;
-  }
+  } */
 `;
 const IconWrapper = styled.div`
   display: flex;
