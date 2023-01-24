@@ -13,10 +13,10 @@ import noimg from "../../assets/images/noimage.png";
 const Card = ({ info, mr }) => {
   return (
     <Container mr={mr}>
-      <Img src={info?.user.img || noimg} />
+      <Img src={info?.attachments[0].imgPath || noimg} />
       <InfoWrapper>
         <User>
-          <User.Img src={info?.user.img || noimg} />
+          <User.Img src={info?.attachments[0].imgPath || noimg} />
         </User>
         <div className="subtitle">
           {info?.name || "New Apartment Nice View"}
