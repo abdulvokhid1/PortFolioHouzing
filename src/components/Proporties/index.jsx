@@ -32,7 +32,7 @@ const Proporties = () => {
       <div className="description center">
         Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
       </div>
-      <Total className="description">{data?.length || [""]}Total </Total>
+      <Total className="description">{data?.length || []}Total </Total>
       <Wrapper>
         {data.map((value) => {
           return <Card key={value.id} info={value} />;
