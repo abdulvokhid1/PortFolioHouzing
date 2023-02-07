@@ -29,12 +29,22 @@ const Filter = () => {
     <Advanced>
       <Advanced.Title>Address</Advanced.Title>
       <Section>
-        <Input placeholder={"Country"}></Input>
-        <Input placeholder={"Region"}></Input>
+        <Input
+          name={"country"}
+          defaultValue={query.get("country")}
+          onChange={onChange}
+          placeholder={"Country"}
+        ></Input>
+        <Input
+          name={"region"}
+          defaultValue={query.get("region")}
+          onChange={onChange}
+          placeholder={"Region"}
+        ></Input>
         <Input
           onChange={onChange}
-          name={"city"}
           placeholder={"City"}
+          name={"city"}
           defaultValue={query.get("city")}
         ></Input>
         <Input placeholder={"Zip Code"}></Input>

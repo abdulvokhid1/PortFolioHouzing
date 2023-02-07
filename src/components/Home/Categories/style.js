@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ReactComponent as left } from "../../assets/icons/left.svg";
-import { ReactComponent as right } from "../../assets/icons/rightarrow.svg";
+import { ReactComponent as left } from "../../../assets/icons/left.svg";
+import { ReactComponent as right } from "../../../assets/icons/rightarrow.svg";
 
 const Container = styled.div`
   display: flex;
