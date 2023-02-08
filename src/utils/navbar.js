@@ -29,4 +29,22 @@ export const navbar = [
     private: false,
     hidden: false,
   },
+  {
+    id: 4,
+    title: "Signin",
+    path: "/signin",
+    Element: <Generic />,
+    search: "?",
+    private: false,
+    hidden: true,
+  },
+  {
+    id: 3,
+    title: "Signup",
+    path: "/signup",
+    Element: <Generic />,
+    search: "?",
+    private: false,
+    hidden: true,
+  },
 ];
