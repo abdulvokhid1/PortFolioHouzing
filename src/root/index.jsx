@@ -8,8 +8,13 @@ const Root = () => {
       <Routes>
         <Route path="/" element={<Navigate to={"/home"} />} />
         <Route element={<Navbar />}>
-          {navbar.map(({ path, Element, id }) => {
-            return <Route key={id} path={path} element={Element} />;
+          {navbar.map(({ path, Element, id, hidden }) => {
+            return !hidden && <Route key={id} path={path} element={Element} />;
+          })}
+        </Route>
+        <Route>
+          {navbar.map(({ path, Element, id, hidden }) => {
+            return hidden && <Route key={id} path={path} element={Element} />;
           })}
         </Route>
       </Routes>

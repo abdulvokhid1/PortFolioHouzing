@@ -23,11 +23,13 @@ const Navbar = () => {
             <Logo.Title>Houzing</Logo.Title>
           </Logo>
           <NavbarBody>
-            {navbar.map(({ title, id, path }) => {
+            {navbar.map(({ title, id, path, hidden }) => {
               return (
-                <StyledNavLink key={id} to={path}>
-                  {title}
-                </StyledNavLink>
+                !hidden && (
+                  <StyledNavLink key={id} to={path}>
+                    {title}
+                  </StyledNavLink>
+                )
               );
             })}
           </NavbarBody>
