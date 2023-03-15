@@ -3,6 +3,7 @@ import Filter from "../Filter";
 import Recommended from "../Home/Recommended";
 import Carousel from "./Carousel";
 import Categories from "./Categories";
+import Footer from "./Footer";
 import { Container } from "./style";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Carousel />
       <Recommended />
       <Categories />
+      <Footer />
     </Container>
   );
 };

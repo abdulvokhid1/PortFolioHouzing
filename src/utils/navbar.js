@@ -1,6 +1,7 @@
 import Proporties from "../components/Proporties";
 import Generic from "../pages/Generic";
 import Home from "../pages/Home";
+import Signin from "../pages/Signin";
 export const navbar = [
   {
     id: 1,
@@ -33,7 +34,7 @@ export const navbar = [
     id: 4,
     title: "Signin",
     path: "/signin",
-    Element: <Generic />,
+    Element: <Signin />,
     search: "?",
     private: false,
     hidden: true,
